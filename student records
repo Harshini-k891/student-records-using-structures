@@ -1,0 +1,39 @@
+#include<stdio.h>
+#include<string.h>
+struct student
+{
+    char name[10];
+    int rollno;
+    int age;
+    float marks;
+};
+int main()
+{
+    struct student s1[3];
+    int i;
+     s1[0].rollno=1;
+     strcpy(s1[0].name,"harshini");
+     s1[0].age=20;
+     s1[0].marks=90;
+
+     s1[1].rollno=2;
+     strcpy(s1[1].name,"raju");
+     s1[1].age=22;
+     s1[1].marks=99;
+
+     s1[2].rollno=3;
+    strcpy(s1[2].name,"heyyyy");
+    s1[2].age=20;
+     s1[2].marks=90;
+
+    printf("student records \n");
+    for(i=0;i<3;i++)
+    {
+        printf("student\n",i+1);
+        printf("name: %s\n",s1[i].name);
+        printf("rollno: %d\n",s1[i].rollno);
+        printf("age: %d\n",s1[i].age);
+        printf("marks: %d\n",s1[i].marks);
+    }
+    return 0;
+}
